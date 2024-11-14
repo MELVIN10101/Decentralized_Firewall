@@ -3,10 +3,6 @@
 
 #include <pcap.h>
 
-// Function to initialize and start packet capturing
-void start_packet_capture(const char *device);
+void start_packet_capture(const char *interface, pcap_handler callback, void *user_data);
 
-// Callback function to handle each captured packet
-void packet_handler(u_char *args, const struct pcap_pkthdr *header, const u_char *packet);
-
-#endif
+#endif // PACKET_CAPTURE_H

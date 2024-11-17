@@ -3,8 +3,9 @@ CFLAGS = -Wall -g
 INCLUDE = -Iinclude -Isrc/DPI
 SRC_DIR = src/DPI
 OBJ_DIR = obj
+LDFLAGS = -lpcap
 
-OBJ = $(OBJ_DIR)/packet_capture.o $(OBJ_DIR)/packet_parser.o
+OBJ = $(OBJ_DIR)/packet_capture.o $(OBJ_DIR)/packet_parser.o $(OBJ_DIR)/traffic_classification.o 
 
 all: main
 
